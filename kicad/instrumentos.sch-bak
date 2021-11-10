@@ -1,0 +1,254 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 5
+Title "Instrumentos"
+Date "2021-11-10"
+Rev "0.1"
+Comp "Julio Cesar Kochhann"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM358 U4
+U 1 1 618451DB
+P 8650 3750
+F 0 "U4" H 8700 3900 50  0000 C CNN
+F 1 "LM358" H 8750 3600 50  0000 C CNN
+F 2 "" H 8650 3750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 8650 3750 50  0001 C CNN
+	1    8650 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U5
+U 3 1 618453A5
+P 8650 3750
+F 0 "U5" H 8608 3750 50  0001 L CNN
+F 1 "LM358" H 8608 3705 50  0001 L CNN
+F 2 "" H 8650 3750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 8650 3750 50  0001 C CNN
+	3    8650 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR024
+U 1 1 61873A66
+P 8550 2950
+F 0 "#PWR024" H 8550 2800 50  0001 C CNN
+F 1 "+5V" H 8565 3123 50  0000 C CNN
+F 2 "" H 8550 2950 50  0001 C CNN
+F 3 "" H 8550 2950 50  0001 C CNN
+	1    8550 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 2950 8550 3450
+$Comp
+L power:GND #PWR025
+U 1 1 6187466E
+P 8550 4600
+F 0 "#PWR025" H 8550 4350 50  0001 C CNN
+F 1 "GND" H 8555 4427 50  0000 C CNN
+F 2 "" H 8550 4600 50  0001 C CNN
+F 3 "" H 8550 4600 50  0001 C CNN
+	1    8550 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4600 8550 4050
+Wire Wire Line
+	8350 3850 8150 3850
+Wire Wire Line
+	8150 3850 8150 3300
+Wire Wire Line
+	8150 3300 9250 3300
+Wire Wire Line
+	9250 3300 9250 3750
+Wire Wire Line
+	9250 3750 8950 3750
+$Comp
+L Device:R R8
+U 1 1 6187CCB2
+P 7200 4200
+F 0 "R8" H 7270 4246 50  0000 L CNN
+F 1 "1R/10W" H 7270 4155 50  0000 L CNN
+F 2 "" V 7130 4200 50  0001 C CNN
+F 3 "~" H 7200 4200 50  0001 C CNN
+	1    7200 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 6187D5CE
+P 7700 3650
+F 0 "R9" V 7493 3650 50  0000 C CNN
+F 1 "100k" V 7584 3650 50  0000 C CNN
+F 2 "" V 7630 3650 50  0001 C CNN
+F 3 "~" H 7700 3650 50  0001 C CNN
+	1    7700 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7850 3650 8350 3650
+$Comp
+L power:GND #PWR023
+U 1 1 618853AB
+P 7200 4600
+F 0 "#PWR023" H 7200 4350 50  0001 C CNN
+F 1 "GND" H 7205 4427 50  0000 C CNN
+F 2 "" H 7200 4600 50  0001 C CNN
+F 3 "" H 7200 4600 50  0001 C CNN
+	1    7200 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 4600 7200 4350
+Text GLabel 9650 3750 2    50   Input ~ 0
+AMM
+Wire Wire Line
+	9650 3750 9250 3750
+Connection ~ 9250 3750
+Text GLabel 6750 3650 0    50   Input ~ 0
+OUT-
+Wire Notes Line
+	1200 2500 1200 5100
+Wire Notes Line
+	1200 5100 5600 5100
+Wire Notes Line
+	5600 5100 5600 2500
+Wire Notes Line
+	5600 2500 1200 2500
+Wire Notes Line
+	6100 2500 6100 5100
+Wire Notes Line
+	6100 5100 10250 5100
+Wire Notes Line
+	10250 5100 10250 2500
+Wire Notes Line
+	10250 2500 6100 2500
+Text Notes 1350 2700 0    79   ~ 0
+VOLTMETER\n
+Text Notes 6250 2700 0    79   ~ 0
+AMMETER\n
+Wire Wire Line
+	6750 3650 7200 3650
+Wire Wire Line
+	7200 4050 7200 3650
+Connection ~ 7200 3650
+Wire Wire Line
+	7200 3650 7550 3650
+Wire Wire Line
+	2850 3650 3750 3650
+Connection ~ 2850 3650
+$Comp
+L Device:R R7
+U 1 1 6184E50F
+P 2850 4200
+F 0 "R7" H 2920 4246 50  0000 L CNN
+F 1 "680" H 2920 4155 50  0000 L CNN
+F 2 "" V 2780 4200 50  0001 C CNN
+F 3 "~" H 2850 4200 50  0001 C CNN
+	1    2850 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 61854736
+P 2300 3650
+F 0 "R6" V 2093 3650 50  0000 C CNN
+F 1 "4k7" V 2184 3650 50  0000 C CNN
+F 2 "" V 2230 3650 50  0001 C CNN
+F 3 "~" H 2300 3650 50  0001 C CNN
+	1    2300 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 6185F3E0
+P 2850 4600
+F 0 "#PWR020" H 2850 4350 50  0001 C CNN
+F 1 "GND" H 2855 4427 50  0000 C CNN
+F 2 "" H 2850 4600 50  0001 C CNN
+F 3 "" H 2850 4600 50  0001 C CNN
+	1    2850 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 4600 2850 4350
+Wire Wire Line
+	2450 3650 2850 3650
+Wire Wire Line
+	2850 4050 2850 3650
+Text GLabel 1850 3650 0    50   Input ~ 0
+OUT+
+Wire Wire Line
+	1850 3650 2150 3650
+Connection ~ 4600 3750
+Wire Wire Line
+	4950 3750 4600 3750
+Text GLabel 4950 3750 2    50   Input ~ 0
+VOLTM
+Wire Wire Line
+	4600 3750 4350 3750
+Wire Wire Line
+	4600 3300 4600 3750
+Wire Wire Line
+	3600 3300 4600 3300
+Wire Wire Line
+	3600 3850 3600 3300
+Wire Wire Line
+	3750 3850 3600 3850
+Wire Wire Line
+	3950 2950 3950 3450
+Wire Wire Line
+	3950 4600 3950 4050
+$Comp
+L power:GND #PWR022
+U 1 1 618569F2
+P 3950 4600
+F 0 "#PWR022" H 3950 4350 50  0001 C CNN
+F 1 "GND" H 3955 4427 50  0000 C CNN
+F 2 "" H 3950 4600 50  0001 C CNN
+F 3 "" H 3950 4600 50  0001 C CNN
+	1    3950 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR021
+U 1 1 61855EF6
+P 3950 2950
+F 0 "#PWR021" H 3950 2800 50  0001 C CNN
+F 1 "+5V" H 3965 3123 50  0000 C CNN
+F 2 "" H 3950 2950 50  0001 C CNN
+F 3 "" H 3950 2950 50  0001 C CNN
+	1    3950 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U3
+U 1 1 6183F637
+P 4050 3750
+F 0 "U3" H 4100 3900 50  0000 C CNN
+F 1 "LM358" H 4150 3600 50  0000 C CNN
+F 2 "" H 4050 3750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 4050 3750 50  0001 C CNN
+	1    4050 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U4
+U 3 1 61840174
+P 4050 3750
+F 0 "U4" H 4008 3750 50  0001 L CNN
+F 1 "LM358" H 4008 3705 50  0001 L CNN
+F 2 "" H 4050 3750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 4050 3750 50  0001 C CNN
+	3    4050 3750
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

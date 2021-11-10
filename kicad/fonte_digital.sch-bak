@@ -1,0 +1,380 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title "Fonte de Alimentação Ajustável"
+Date "2021-11-10"
+Rev "0.1"
+Comp "Julio Cesar Kochhann"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_PIC16:PIC16F870-ISO U1
+U 1 1 6169FB17
+P 3750 2650
+F 0 "U1" H 3850 3650 50  0000 C CNN
+F 1 "PIC16F1933-ISP" H 4100 3550 50  0000 C CNN
+F 2 "" H 3750 2650 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/30569b.pdf" H 3750 2650 50  0001 C CNN
+	1    3750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 616A234E
+P 3750 1400
+F 0 "#PWR03" H 3750 1250 50  0001 C CNN
+F 1 "+5V" H 3765 1573 50  0000 C CNN
+F 2 "" H 3750 1400 50  0001 C CNN
+F 3 "" H 3750 1400 50  0001 C CNN
+	1    3750 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 616A2C5E
+P 3750 3950
+F 0 "#PWR04" H 3750 3700 50  0001 C CNN
+F 1 "GND" H 3755 3777 50  0000 C CNN
+F 2 "" H 3750 3950 50  0001 C CNN
+F 3 "" H 3750 3950 50  0001 C CNN
+	1    3750 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 3650 3750 3800
+Wire Wire Line
+	3850 3650 3850 3800
+Wire Wire Line
+	3850 3800 3750 3800
+Connection ~ 3750 3800
+Wire Wire Line
+	3750 3800 3750 3950
+Wire Wire Line
+	3750 1400 3750 1650
+Text GLabel 2650 1950 0    50   Input ~ 0
+VPP
+Wire Wire Line
+	2650 1950 2950 1950
+Text GLabel 4900 3350 2    50   Input ~ 0
+DAT-KC3
+Text GLabel 4900 3250 2    50   Input ~ 0
+CLK-KC2
+Text GLabel 2650 2250 0    50   Input ~ 0
+OSC1
+Text GLabel 2650 2450 0    50   Input ~ 0
+OSC2
+Wire Wire Line
+	2650 2250 2950 2250
+Wire Wire Line
+	2650 2450 2950 2450
+Text GLabel 4900 2650 2    50   Input ~ 0
+KR0
+Text GLabel 4900 2750 2    50   Input ~ 0
+KR1
+Text GLabel 4900 2850 2    50   Input ~ 0
+KR2
+Text GLabel 4900 2950 2    50   Input ~ 0
+KR3
+Text GLabel 4900 3050 2    50   Input ~ 0
+KC0
+Text GLabel 4900 3150 2    50   Input ~ 0
+KC1
+Text GLabel 2650 2950 0    50   Input ~ 0
+SCL1
+Text GLabel 2650 3050 0    50   Input ~ 0
+SDA1
+Wire Wire Line
+	2650 3050 2950 3050
+Wire Wire Line
+	2950 2950 2650 2950
+Text GLabel 2650 2850 0    50   Input ~ 0
+PWM1
+Wire Wire Line
+	2650 2850 2950 2850
+Text GLabel 2650 3350 0    50   Input ~ 0
+BUZ
+Wire Wire Line
+	2650 3150 2950 3150
+Text GLabel 4900 2350 2    50   Input ~ 0
+PWR_BTN
+Text GLabel 4900 1950 2    50   Input ~ 0
+VOLTM
+Text GLabel 4900 2050 2    50   Input ~ 0
+AMM
+Text GLabel 4900 2150 2    50   Input ~ 0
+NTC
+Text GLabel 2750 5950 2    50   Input ~ 0
+OSC2
+Text GLabel 1650 5950 0    50   Input ~ 0
+OSC1
+$Comp
+L power:GND #PWR02
+U 1 1 616C0AA8
+P 2550 6850
+F 0 "#PWR02" H 2550 6600 50  0001 C CNN
+F 1 "GND" H 2555 6677 50  0000 C CNN
+F 2 "" H 2550 6850 50  0001 C CNN
+F 3 "" H 2550 6850 50  0001 C CNN
+	1    2550 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 616BD6D4
+P 2550 6400
+F 0 "C2" H 2665 6446 50  0000 L CNN
+F 1 "15p" H 2665 6355 50  0000 L CNN
+F 2 "" H 2588 6250 50  0001 C CNN
+F 3 "~" H 2550 6400 50  0001 C CNN
+	1    2550 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 616BB292
+P 2200 5950
+F 0 "Y1" H 2200 6218 50  0000 C CNN
+F 1 "Crystal" H 2200 6127 50  0000 C CNN
+F 2 "" H 2200 5950 50  0001 C CNN
+F 3 "~" H 2200 5950 50  0001 C CNN
+	1    2200 5950
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 8300 4050 1250 800 
+U 6175A002
+F0 "Fonte Saida" 50
+F1 "fonte_saida.sch" 50
+$EndSheet
+$Sheet
+S 8300 5450 1250 800 
+U 6183C4C3
+F0 "Instrumentos" 50
+F1 "instrumentos.sch" 50
+$EndSheet
+$Sheet
+S 8300 2650 1250 800 
+U 618E81F6
+F0 "I/O" 50
+F1 "io.sch" 50
+$EndSheet
+Wire Wire Line
+	2550 6250 2550 5950
+Wire Wire Line
+	2550 6550 2550 6850
+Wire Wire Line
+	1850 6250 1850 5950
+Wire Wire Line
+	1850 6850 1850 6550
+$Comp
+L Device:C C1
+U 1 1 616BDC25
+P 1850 6400
+F 0 "C1" H 1965 6446 50  0000 L CNN
+F 1 "15p" H 1965 6355 50  0000 L CNN
+F 2 "" H 1888 6250 50  0001 C CNN
+F 3 "~" H 1850 6400 50  0001 C CNN
+	1    1850 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 616BE901
+P 1850 6850
+F 0 "#PWR01" H 1850 6600 50  0001 C CNN
+F 1 "GND" H 1855 6677 50  0000 C CNN
+F 2 "" H 1850 6850 50  0001 C CNN
+F 3 "" H 1850 6850 50  0001 C CNN
+	1    1850 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 5950 1850 5950
+Wire Wire Line
+	1850 5950 2050 5950
+Connection ~ 1850 5950
+Wire Wire Line
+	2350 5950 2550 5950
+Wire Wire Line
+	2550 5950 2750 5950
+Connection ~ 2550 5950
+Wire Wire Line
+	4900 3350 4550 3350
+Wire Wire Line
+	4550 3250 4900 3250
+Wire Wire Line
+	4900 3150 4550 3150
+Wire Wire Line
+	4550 3050 4900 3050
+Wire Wire Line
+	4900 2950 4550 2950
+Wire Wire Line
+	4550 2850 4900 2850
+Wire Wire Line
+	4900 2750 4550 2750
+Wire Wire Line
+	4550 2650 4900 2650
+Wire Wire Line
+	4900 2350 4550 2350
+Wire Wire Line
+	4550 2150 4900 2150
+Wire Wire Line
+	4900 2050 4550 2050
+Wire Wire Line
+	4550 1950 4900 1950
+Wire Wire Line
+	5000 6150 5000 6850
+Wire Wire Line
+	5500 6550 5500 6850
+Connection ~ 5500 6050
+Wire Wire Line
+	5500 6250 5500 6050
+Wire Wire Line
+	5500 5250 5500 6050
+Wire Wire Line
+	5000 5250 5000 5450
+$Comp
+L power:+5V #PWR07
+U 1 1 616E897E
+P 5500 5250
+F 0 "#PWR07" H 5500 5100 50  0001 C CNN
+F 1 "+5V" H 5515 5423 50  0000 C CNN
+F 2 "" H 5500 5250 50  0001 C CNN
+F 3 "" H 5500 5250 50  0001 C CNN
+	1    5500 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 6050 5500 6050
+Connection ~ 5000 5950
+Wire Wire Line
+	5750 5950 5000 5950
+Text GLabel 5750 5950 2    50   Input ~ 0
+VPP
+Wire Wire Line
+	5000 5950 4750 5950
+Wire Wire Line
+	5000 6150 4750 6150
+Wire Wire Line
+	4750 6350 5100 6350
+Wire Wire Line
+	4750 6250 5100 6250
+Wire Wire Line
+	5000 5750 5000 5950
+Text GLabel 5100 6350 2    50   Input ~ 0
+CLK
+Text GLabel 5100 6250 2    50   Input ~ 0
+DAT
+$Comp
+L power:GND #PWR06
+U 1 1 616AB194
+P 5000 6850
+F 0 "#PWR06" H 5000 6600 50  0001 C CNN
+F 1 "GND" H 5005 6677 50  0000 C CNN
+F 2 "" H 5000 6850 50  0001 C CNN
+F 3 "" H 5000 6850 50  0001 C CNN
+	1    5000 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 616AA934
+P 5500 6850
+F 0 "#PWR08" H 5500 6600 50  0001 C CNN
+F 1 "GND" H 5505 6677 50  0000 C CNN
+F 2 "" H 5500 6850 50  0001 C CNN
+F 3 "" H 5500 6850 50  0001 C CNN
+	1    5500 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 616A9D78
+P 5500 6400
+F 0 "C3" H 5615 6446 50  0000 L CNN
+F 1 "100n" H 5615 6355 50  0000 L CNN
+F 2 "" H 5538 6250 50  0001 C CNN
+F 3 "~" H 5500 6400 50  0001 C CNN
+	1    5500 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 616A7754
+P 5000 5250
+F 0 "#PWR05" H 5000 5100 50  0001 C CNN
+F 1 "+5V" H 5015 5423 50  0000 C CNN
+F 2 "" H 5000 5250 50  0001 C CNN
+F 3 "" H 5000 5250 50  0001 C CNN
+	1    5000 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 616A70CF
+P 5000 5600
+F 0 "R1" H 5070 5646 50  0000 L CNN
+F 1 "10k" H 5070 5555 50  0000 L CNN
+F 2 "" V 4930 5600 50  0001 C CNN
+F 3 "~" H 5000 5600 50  0001 C CNN
+	1    5000 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J1
+U 1 1 616A3D1D
+P 4550 6150
+F 0 "J1" H 4468 6567 50  0000 C CNN
+F 1 "ICSP" H 4468 6476 50  0000 C CNN
+F 2 "" H 4550 6150 50  0001 C CNN
+F 3 "~" H 4550 6150 50  0001 C CNN
+	1    4550 6150
+	-1   0    0    -1  
+$EndComp
+Wire Notes Line
+	3350 7350 3350 4750
+Wire Notes Line
+	3350 4750 1100 4750
+Wire Notes Line
+	1100 4750 1100 7350
+Wire Notes Line
+	1100 7350 3350 7350
+Text Notes 1200 4950 0    79   ~ 0
+OSCILLATOR
+Text Notes 4200 4950 0    79   ~ 0
+ICSP
+Wire Notes Line
+	6350 7350 6350 4750
+Wire Notes Line
+	6350 4750 4100 4750
+Wire Notes Line
+	4100 4750 4100 7350
+Wire Notes Line
+	4100 7350 6350 7350
+Wire Wire Line
+	2650 3350 2950 3350
+Text GLabel 2650 3250 0    50   Input ~ 0
+SDA2
+Text GLabel 2650 3150 0    50   Input ~ 0
+SCL2
+Wire Wire Line
+	2650 3250 2950 3250
+Text Notes 2300 3300 1    50   ~ 0
+I2C Displays
+NoConn ~ 2950 2650
+NoConn ~ 2950 2750
+NoConn ~ 4550 2250
+NoConn ~ 4550 2450
+$Sheet
+S 8300 1250 1250 800 
+U 616F710D
+F0 "Fonte Entrada" 50
+F1 "fonte_entrada.sch" 50
+$EndSheet
+$EndSCHEMATC
